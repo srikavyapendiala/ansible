@@ -16,8 +16,8 @@
       - name: Print URL from Task
         debug:
           msg: URL= {{ URL }}
-        vars:
-          URl: task.example.com
+    vars:
+      URl: task.example.com
 
 
 
