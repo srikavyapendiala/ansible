@@ -1,4 +1,6 @@
----
--Name:kavya
-   -Contact no:9963763350
-   -Address: Hyderabad
+- name: kavya
+  hosts: all
+  tasks:
+     - name: print kavya
+       debug:
+       msg: kavya ||**||
