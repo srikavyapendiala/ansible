@@ -1,8 +1,14 @@
 - name: print message
   hosts: all
+  vars_files:
+    - eample-vars.yml
   vars:
     URL: www.kavya.com
     Project: Example
+  vars_promt:
+    - name: URL
+      promt: Enter URL
+      private: no
     tasks:
       - name: Print URL
         debug:
@@ -12,3 +18,16 @@
           msg: URL= {{ URL }}
         vars:
           URl: task.example.com
+
+
+
+- name: Dynamic Vars
+  hosts: all
+  tasks:
+    - name: Gather Date
+      shell: date +%F
+      register: out
+    - name: Print Date
+      debug:
+       msg: Date = {{ out }}
+
