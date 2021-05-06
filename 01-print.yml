@@ -1,6 +1,6 @@
-- name: kavya
+- name: Demo on just print a message
   hosts: all
   tasks:
-     - name: print kavya
-       debug:
-       msg: kavya ||**||
+    - name: print kavya
+      debug:
+        msg: kavya ||**||
