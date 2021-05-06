@@ -1,6 +1,6 @@
 - name: Setup todo Project
   hosts: all
-  become_user: yes
+  become: yes
   tasks:
     - name: Apt Update
       apt:
