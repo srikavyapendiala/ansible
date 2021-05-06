@@ -1,0 +1,9 @@
+- name: print message
+  hosts: all
+  vars:
+    URL: www.kavya.com
+    Project: Example
+    tasks:
+      -name: Print URL
+       debug:
+         msg: URL= {{ URL }}
