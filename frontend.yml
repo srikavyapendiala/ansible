@@ -21,7 +21,7 @@
     - name: Install npm
       npm:
         name: frontend
-        path: /Idea/Projects/ansible
+        path: /IdeaProjects/ansible
 
 
 
