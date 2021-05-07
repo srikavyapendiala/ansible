@@ -23,7 +23,7 @@
     - name: Install npm
       npm:
         name: npm
-        path: /hoe/kavya/IdeaProjects/ansible/frontend.yml
+        path: /home/kavya/IdeaProjects/ansible/frontend.yml
 
 
 
