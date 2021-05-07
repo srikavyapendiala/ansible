@@ -14,10 +14,10 @@
         name: nginx
         enabled: yes
 
-    - name: apt install node.js
-      apt:
+    - name: Install node.js package
+      community.general.npm:
         name: node.js
-
+        global: yes
 
     - name: Install npm
       npm:
