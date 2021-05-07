@@ -8,3 +8,8 @@
         update_cache: yes
         state: present
 
+    - namr: Download foo.conf
+      get_url
+        url: http://        :8081/repository/frontend/frontend-{{APP_VERSION}}.zip
+        dest: /tmp/frontend.zip
+
