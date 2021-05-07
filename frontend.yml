@@ -14,14 +14,16 @@
         name: nginx
         enabled: yes
 
-    - name: install node.js
-        shell: apt-get install nodejs
-        sudo: yes
+    - name: apt-get install node.js
+      apt:
+        name: node.js
+        update_cache: yes
+        state: present
 
     - name: Install npm
       npm:
-        name: frontend
-        path: /IdeaProjects/ansible
+        name: npm
+        path: /hoe/kavya/IdeaProjects/ansible/frontend.yml
 
 
 
