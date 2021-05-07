@@ -8,8 +8,21 @@
         update_cache: yes
         state: present
 
-    - namr: Download foo.conf
-      get_url
-        url: http://        :8081/repository/frontend/frontend-{{APP_VERSION}}.zip
-        dest: /tmp/frontend.zip
+    - name: Start Nginx
+      systemd:
+        state: started
+        name: nginx
+        enabled: yes
+
+    - name: install node.js
+        shell: apt-get install nodejs
+        sudo: yes
+
+    - name: Install npm
+      npm:
+        name: frontend
+        path: /Idea/Projects/ansible
+
+
+
 
