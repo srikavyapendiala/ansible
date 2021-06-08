@@ -1,0 +1,16 @@
+- name: Conditions
+hosts: all
+tasks:
+  
+  - name: Print centos
+    debug:
+      msg: Hello centos
+    tags: 
+      - centos 
+
+  - name: Print ubuntu
+    debug:
+      msg: Hello ubuntu
+    tags: 
+      - ubuntu
+ 
