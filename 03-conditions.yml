@@ -1,0 +1,14 @@
+- name: Conditions
+hosts: all
+tasks:
+  
+  - name: Print centos
+    debug:
+      msg: Hello centos
+    when: os == "centos" 
+
+  - name: Print ubuntu
+    debug:
+      msg: Hello ubuntu
+    when: os == "ubuntu" 
+ 
