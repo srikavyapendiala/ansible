@@ -1,0 +1,29 @@
+- name: Setup todo Project
+  hosts: all
+  become: yes
+  tasks:
+    - name: Apt Update
+      apt:
+        name: nginx
+        update_cache: yes
+        state: present
+
+    - name: Start Nginx
+      systemd:
+        state: started
+        name: nginx
+        enabled: yes
+
+    - name: Install node.js package
+         community.general.npm:
+            name: node.js
+            global: yes
+
+    - name: Install npm
+      npm:
+        name: npm
+        path: /home/kavya/IdeaProjects/ansible/frontend.yml
+
+
+
+
